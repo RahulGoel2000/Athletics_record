@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Drobot</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <!-- <link rel="stylesheet" href="css/login_style.css"> -->
+  <link rel="stylesheet" href="css/login_style.css">
+
+</head>
+<body>
+
+<!-- <section class="container phone-container"> -->
+  <div class="container" id="container" style="width: 403px;">
+  <div class="form-container sign-in-container" style="width: 100%;">
+     <div class="form">
+      <!-- <div> --><h2>Phone Sign In</h2><br>
+        <!-- <label for="phoneNumber">Phone Number</label> <br> -->
+        <span>Phone number must be wth country code</span>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]" placeholder="Phone number"/> <br>
+        <div id="recaptcha-container"></div><br>
+        <button class="directbutton" id="getCode">Get Code</button><br> 
+      <!-- </div> -->
+      <!-- <div> -->
+        <!-- <label for="code">Code</label> <br> -->
+        <input type="text" id="code" name="code" placeholder="Enter code"/> <br>
+      <!-- </div> -->
+      
+      <button class="directbutton" id="signInWithPhone">Login</button><br>
+       
+  </div>
+  <!-- </section> --></div>
+</div>
+
+
+
+  
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+  <script>
+
+    var config = {
+      apiKey: "AIzaSyAQvFyyIixGJo3EUqhqnrWyK5wsEWEn0Co",
+      authDomain: "athletics-apms.firebaseapp.com",
+      projectId: "athletics-apms",
+      storageBucket: "athletics-apms.appspot.com",
+      messagingSenderId: "130590941958",
+      appId: "1:130590941958:web:49042928c66cee5df67487"
+	};
+    firebase.initializeApp(config);
+
+    
+  </script>
+
+  <script src="javascript_frontend/phoneloginjavascript.js"></script>
+
+
+  
+
+
+
+  </body>

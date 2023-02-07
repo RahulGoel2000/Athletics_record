@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Drobot</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <link rel="stylesheet" href="css/login_style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<div class="form">
+			<img src="logo.jpg" style="height: 10%;"/>
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<button onclick="fblogin()" class="hidebutton"><a href="#" class="social"><i class="fas fa-phone-alt"></i></a></button>
+				<button onclick="googlelogin()" class="hidebutton"><a href="#" class="social"><i class="fab fa-google-plus-g"></i></a></button>
+				<!-- <button onclick="gitlogin()" class="hidebutton"><a href="#" class="social"><i class="fab fa-github"></i></a></button> -->
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" id="email_class" />
+			<input type="password" placeholder="Password" id="password_class"/>
+			<button class="directbutton" onclick="signup()">Sign Up</button>
+		</div>
+	</div>
+	<div class="form-container sign-in-container">
+		<div class="form">
+			<img src="logo.jpg" style="height: 10%;"/>
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<button class="hidebutton"><a href="/signinphone" class="social"><i class="fas fa-phone-alt"></i></a></button>
+				<button onclick="googlelogin()" class="hidebutton"><a href="#" class="social"><i class="fab fa-google-plus-g"></i></a></button>
+				<!-- <button onclick="gitlogin()" class="hidebutton"><a href="#" class="social"><i class="fab fa-github"></i></a></button> -->
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" id="email_field" />
+			<input type="password" placeholder="Password" id="password_field" />
+			<br>
+			<button onclick="resetpassword()" class="hidebutton"><a href="#">forgot your password?</a></button>
+			<br>
+			<button class="directbutton" onclick="login()">Sign In</button>
+		</div>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost directbutton" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Get Started!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost directbutton" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+		- Read how I created this and how you can join the challenge
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+	</p>
+</footer> -->
+<!-- partial -->
+  <script  src="javascript_frontend/login_design_script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+  <script>
+
+    var config = {
+
+			apiKey: "AIzaSyAQvFyyIixGJo3EUqhqnrWyK5wsEWEn0Co",
+			authDomain: "athletics-apms.firebaseapp.com",
+			projectId: "athletics-apms",
+			storageBucket: "athletics-apms.appspot.com",
+			messagingSenderId: "130590941958",
+			appId: "1:130590941958:web:49042928c66cee5df67487"
+	};
+    firebase.initializeApp(config);
+
+    
+  </script>
+  
+
+
+  <script src="javascript_frontend/loginjavascript.js"></script>
+
+
+
+</body>
+</html>

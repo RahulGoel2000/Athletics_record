@@ -3,40 +3,40 @@ const router = express.Router();
 var path = require('path');
 var authenticated = "false";
 
-// router.get('/login', (req, res, next) => {
+router.get('/login', (req, res, next) => {
 
-//   authenticated = req.cookies.authenticated;
-//   console.log(req.cookies.authenticated);
-//   // storage.setItem("ram","shyam");
-//   // console.log(authenticated)
-//   if(authenticated=="true")
-//   {
-//   res.redirect('/home');
-//   }
-//   else
-//   {
-//     res.render('login');
-//   }
-//   });
+  authenticated = req.cookies.authenticated;
+  console.log(req.cookies.authenticated);
+  // storage.setItem("ram","shyam");
+  // console.log(authenticated)
+  if(authenticated=="true")
+  {
+  res.redirect('/home');
+  }
+  else
+  {
+    res.render('login');
+  }
+  });
 
-//   router.get('/signinphone', (req, res, next) => {
-
-
-//       res.render('signinphone');
-//   });
+  router.get('/signinphone', (req, res, next) => {
 
 
-// router.get('/home', (req, res, next) => {
-//   authenticated = req.cookies.authenticated;
-//   if(authenticated=="true")
-//   {
-//   // res.render('canvas');
-//   res.render('company_select');
-// }
-// else{
-//   res.redirect('/login');
-// }
-// });
+      res.render('signinphone');
+  });
+
+
+router.get('/home', (req, res, next) => {
+  authenticated = req.cookies.authenticated;
+  if(authenticated=="true")
+  {
+  // res.render('canvas');
+  res.render('news');
+}
+else{
+  res.redirect('/login');
+}
+});
 
 // router.get('/form', (req, res, next) => {
 //   authenticated = req.cookies.authenticated;
@@ -164,31 +164,31 @@ var authenticated = "false";
 // });
 
 
-// router.get('/', (req, res, next) => {
-//   authenticated = req.cookies.authenticated;
-//   // console.log(storage.getItem("authenticated"))
-//   if(authenticated=="true")
-//   {
-//     res.render('index-logout');
-//   }
-//   else{
-//     res.render('index-login');
-//   }
-// });
+router.get('/', (req, res, next) => {
+  authenticated = req.cookies.authenticated;
+  // console.log(storage.getItem("authenticated"))
+  // if(authenticated=="true")
+  // {
+  //   res.render('index-logout');
+  // }
+  // else{
+    res.render('login');
+  // }
+});
 
 
 
 
 router.get('/*', (req, res, next) => {
-  // authenticated = req.cookies.authenticated;
+  authenticated = req.cookies.authenticated;
   // console.log(storage.getItem("authenticated"))
-  // if(authenticated=="true")
-  // {
-  //   res.redirect(req.originalUrl);
-  // }
-  // else{
-    res.render('news');
-  // }
+  if(authenticated=="true")
+  {
+    res.redirect(req.originalUrl);
+  }
+  else{
+    res.render('index-login');
+  }
 });
 
 module.exports = router;
