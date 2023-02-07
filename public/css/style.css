@@ -147,10 +147,14 @@ body {
   background: #ffffff;
   border: 5px solid transparent;
   transition: 0.2s all ease-in-out;
+  
+  
   color: #101010;
 }
 .right-container footer #next:hover {
   background: #fffffe;
+ 
+  border: 5px solid transparent;
 }
 
 .pets-name label, .pets-breed label, .pets-birthday label, .pets-gender label, .pets-spayed-neutered label, .pets-weight label {
