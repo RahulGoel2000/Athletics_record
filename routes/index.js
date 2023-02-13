@@ -26,7 +26,7 @@ router.get('/login', (req, res, next) => {
   });
 
 
-router.get('/home', (req, res, next) => {
+router.get('/', (req, res, next) => {
   authenticated = req.cookies.authenticated;
   if(authenticated=="true")
   {
@@ -38,17 +38,31 @@ else{
 }
 });
 
-// router.get('/form', (req, res, next) => {
-//   authenticated = req.cookies.authenticated;
-//   if(authenticated=="true")
-//   {
-//   // res.render('canvas');
-//   res.render('company_form');
-// }
-// else{
-//   res.redirect('/login');
-// }
-// });
+
+router.get('/home', (req, res, next) => {
+  authenticated = req.cookies.authenticated;
+  if(authenticated=="true")
+  {
+  // res.render('canvas');
+  res.render('company_select');
+}
+else{
+  res.redirect('/login');
+}
+});
+
+
+router.get('/form', (req, res, next) => {
+  authenticated = req.cookies.authenticated;
+  if(authenticated=="true")
+  {
+  // res.render('canvas');
+  res.render('company_form');
+}
+else{
+  res.redirect('/login');
+}
+});
 
 
 // router.get('/recording', (req, res, next) => {
