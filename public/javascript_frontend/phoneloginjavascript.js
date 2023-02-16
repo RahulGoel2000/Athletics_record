@@ -37,8 +37,8 @@ const signInWithPhone = sentCodeId => {
     sessionStorage.setItem("user",user);
     window.location.assign('/home');
   })
-  .catch(error => {
-    console.error(error);
+  .catch(err => {
+    console.error(err);
   })
 }
 

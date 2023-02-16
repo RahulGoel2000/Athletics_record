@@ -7,7 +7,7 @@
 
 body {
   align-items: center;
-  background: #b5cef0e2;
+  background: #bfc2c5e2;
   color: rgba(0, 0, 0, 0.8);
   display: grid;
   font-family: "Montserrat", sans-serif;
@@ -25,7 +25,7 @@ body {
 }
 
 .left-container {
-  background: #f59faf;
+  background: #040404;
   overflow: hidden;
   padding: 40px 0 0 0;
   position: relative;
@@ -67,7 +67,7 @@ body {
 }
 
 .right-container {
-  background: #d7eea3;
+  background: white;
   display: grid;
   grid-template-areas: "." ".";
   width: 500px;
@@ -135,20 +135,26 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .right-container footer #back {
-  background: #f59faf;
+  background: #ffffff;
+  border: 5px solid transparent
   transition: 0.2s all ease-in-out;
 }
 .right-container footer #back:hover {
-  background: #d7eea3;
-  color: white;
+  background: #ffffff;
+ 
 }
 .right-container footer #next {
-  background: #f59faf;
-  border: 1px solid transparent;
+  background: #ffffff;
+  border: 5px solid transparent;
+  transition: 0.2s all ease-in-out;
+  
+  
   color: #101010;
 }
 .right-container footer #next:hover {
-  background: #d7eea3;
+  background: #fffffe;
+ 
+  border: 5px solid transparent;
 }
 
 .pets-name label, .pets-breed label, .pets-birthday label, .pets-gender label, .pets-spayed-neutered label, .pets-weight label {

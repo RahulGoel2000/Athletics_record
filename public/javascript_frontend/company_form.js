@@ -56,10 +56,6 @@ function startConnect() {
 // // called when the client loses its connection
 // function onConnectionLost(responseObject) {
 //   if (responseObject.errorCode !== 0) {
-//   }
-// }
-
-
 // console.log("username",mqtt_username)
 
     // var details = { 

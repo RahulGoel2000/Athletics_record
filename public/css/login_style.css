@@ -45,8 +45,8 @@ a {
 
 .directbutton {
 	border-radius: 20px;
-	border: 1px solid #265C7E;
-	background-color: #265C7E;
+	border: 1px solid #090909;
+	background-color: #090909;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -168,9 +168,9 @@ input {
 }
 
 .overlay {
-	background: #4286f4;
-	background: -webkit-linear-gradient(0.25turn, #373B44, #4286f4, #373B44);
-	background: linear-gradient(0.25turn, #373B44, #4286f4, #373B44);
+	background: #0c0c0c;
+	background: -webkit-linear-gradient(0.25turn, #373B44,#090909, #373B44);
+	background: linear-gradient(0.25turn, #373B44, #090909, #373B44);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
